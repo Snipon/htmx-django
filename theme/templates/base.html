@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static tailwind_tags django_htmx %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTMX Demo</title>
+  {% tailwind_css %}
+  <link rel="icon" href="/static/favicon.ico" />
+  <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+</head>
+<body>
+{% include 'header.html' %}
+<main id="content">
+  {% block content %}{% endblock %}
+</main>
+{%  django_htmx_script %}
+</body>
+</html>

@@ -1,0 +1,13 @@
+<header class="bg-emerald-900 text-white py-2">
+  <div class="container flex gap-10 justify-between items-center">
+    <a href="/">
+      <h1 class="text-3xl font-bold">HTMX Demo</h1>
+      <time class="text-xs">{{ time }}</time>
+    </a>
+    <ul class="flex gap-5" hx-boost="true" hx-swap="innerHTML" hx-target="#content">
+      <li><a href="/">Home</a></li>
+      <li><a href="/page">Page</a></li>
+    </ul>
+    <div>;)</div>
+  </div>
+</header>

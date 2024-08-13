@@ -1,0 +1,12 @@
+{% extends base_template %}
+
+{% block content %}
+<main class="my-2">
+  <div class="container grid grid-cols-2 gap-4">
+    <figure><img class="block bg-red-50 text-gray-400" src="{{ image}}" width="900" height="450" alt="{{ title }}" /></figure>
+    <div class="flex flex-col gap-4">
+      <h1 class="text-2xl">{{ title }}</h1>
+      <p>{{ message }}</p></div>
+    </div>
+</main>
+{% endblock %}
