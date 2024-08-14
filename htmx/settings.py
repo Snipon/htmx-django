@@ -25,12 +25,14 @@ SECRET_KEY = 'django-insecure-b=av(4jioq+^nhg2pyg(9l$9(r%5r-mwkwid+6nxz&f*mp3pb9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ASGI_APPLICATION = 'htmx.asgi.application'
 ALLOWED_HOSTS = ["*"]
-
+APPEND_SLASH = False
 
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +42,9 @@ INSTALLED_APPS = [
     'django_htmx',
     'tailwind',
     'theme',
-    'django_browser_reload'
+    'django_browser_reload',
+    'django_eventstream',
+    'rest_framework',
 ]
 
 TAILWIND_APP_NAME = 'theme'

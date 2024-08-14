@@ -1,0 +1,26 @@
+{% extends base_template %}
+
+{% block content %}
+  <main>
+    <div class="container flex flex-col gap-4">
+      <h1 class="text-2xl">{{ title }}</h1>
+      <ul class="flex flex-col gap-8" hx-boost="true" hx-target="#content">
+        {% for page in content %}
+          <li>
+            <a href="{{ page.path }}">
+            <article class="grid grid-cols-4 gap-4">
+              <figure class="col-span-1">
+                <img src="{{ page.image }}" width="400" alt="{{ page.title }}" />
+              </figure>
+              <div class="flex flex-col gap-4 col-span-3">
+                <h2 class="text-xl">{{ page.title }}</h2>
+                <p>{{ page.message }}</p>
+              </div>
+            </article>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </main>
+{% endblock %}
